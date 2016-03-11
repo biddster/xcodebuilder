@@ -21,6 +21,7 @@ module XcodeBuilder
         args << "-project '#{project_file_path}'" if project_file_path
       end
 
+      args << "PLATFORM_NAME=#{sdk}"
       args << "-sdk #{sdk}"
 
       args << "-configuration '#{configuration}'"
